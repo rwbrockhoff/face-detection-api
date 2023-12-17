@@ -3,7 +3,6 @@ const clarifaiFunctions = require("./clarifaiFunctions");
 const postImage = async (req, res) => {
   if (!req.body.imageURL)
     return res.status(400).json({ error: "No image URL" });
-
   const { imageURL } = req.body;
   const MODEL_ID = "face-detection";
   try {

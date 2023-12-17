@@ -15,7 +15,6 @@ const registerUser = (req, res, db) => {
             .insert({
               name,
               email: loginEmail[0].email,
-              joined: new Date(),
             })
             .then((user) => res.status(200).json({ user: user[0] }));
         })
